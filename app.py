@@ -1,9 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template, request, jsonify
+import openai,
+import os
+
+
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Flask is running"
+    return render_template("index.html",
+    name="samuel")
 
 if __name__== "__main__":
     app.run(debug=True)
