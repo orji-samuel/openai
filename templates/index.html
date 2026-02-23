@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min - Copy.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Daynamo-Insuredguard</title>
+    <!-- DASHBOARD -->
+</head>
+<body>
+    <!-- body tag for only html elements -->
+    <div class="body">
+        <!-- nav bar beginnig -->
+        <nav>
+            <!-- logo -->
+            <header><a href="/index.html">DYNAMO <b>INSUREDGUARD</b></a></header>
+            <!-- nav links -->
+            <ul class="nav-links">
+                <li><a href="/index.html" class="page"><h4>Dashboard</h4></a></li>
+                <li><a href=""><h4>Policies</h4></a></li>
+                <li><a href=""><h4>Documents</h4></a></li>
+                <li><a href=""><h4>Reminders</h4></a></li>
+                <li><a href=""><h4>Clients</h4></a></li>
+                <li><a href=""><h4>Agents</h4></a></li>
+            </ul>
+            <!-- additional nav icons -->
+            <div class="migrate">
+                <span class="anything"><i class="fa fa-moon"></i></span>
+                <span class="notification"><i class="fa fa-bell-o"></i></span>
+                <div class="profile" >
+                    <span class="img1"><img src="" alt=""><i class="fa fa-user"></i></span>
+                    <span class="txt1"><b style="color: black;">Mr Success</b><br> Manager</span>
+                </div>
+            </div>
+        </nav>
+        <!-- end of nav bar -->
+        <!-- Dashboard contents -->
+         <div class="dashboard">
+            <!-- header of dashboard-->
+            <header>
+                <h1>Dashboard</h1>
+                <span class="butn1"><button><b>+</b> New Policy</button></span>
+            </header>
+            <!-- main part of dashboard -->
+             <div class="main-dashboard">
+                <!-- dashboard contents -->
+                <div class="boxes1">
+                    <header class="">
+                        <span class="img2"><img src="{{ url_for('static', filename='images/icons8-verified-50-2.png') }}" width="40"></span>
+                        <span class="img3"><img src="{{ url_for('static', filename='images/icons8-arrow-50.png ') }}" alt=""></span>
+                    </header>
+                    <br>
+                    <div class="content">
+                        <h4>Active Policies</h4><br>
+                        <h1 id="active">***</h1>
+                        <h5 style="color: gray;">Don't need attention</h5>
+                    </div>
+                </div>
+                <div class="boxes2">
+                    <header class="">
+                        <span class="img2"><img src="{{ url_for('static', filename='images/icons8-expired-50-2.png') }}" alt=""></span>
+                        <span class="img3"><img src="{{ url_for('static', filename='images/icons8-arrow-50.png ') }}" alt=""></span>
+                    </header>
+                    <br>
+                    <div class="content">
+                        <h4>Expiring Soon</h4><br>
+                        <h1 id="Expiring">{{ data.total_policies }}</h1>
+                        <h5 style="color: gray;">RE-request required</h5>
+                    </div>
+                </div>
+                <div class="boxes3">
+                     <header class="">
+                        <span class="img2"><img src="{{ url_for('static', filename='images/icons8-alert-50-3.png ') }}" alt=""></span>
+                        <span class="img3"><img src="{{ url_for('static', filename='images/icons8-arrow-50.png ') }}" alt=""></span>
+                    </header>
+                    <br>
+                    <div class="content">
+                        <h4>Need Validation</h4><br>
+                        <h1 id="validation">***</h1>
+                        <h5 style="color: gray;">Validation required</h5>
+                    </div>
+                </div>
+                <div class="boxes4">
+                    <header class="">
+                        <span class="img2"><img src="{{ url_for('static', filename='images/icons8-stop-100-2.png ') }}" alt=""></span>
+                        <span class="img3"><img src="{{ url_for('static', filename='images/icons8-arrow-50.png ') }}" alt=""></span>
+                    </header>
+                    <br>
+                    <div class="content">
+                        <h4>Recently Expired</h4><br>
+                        <h1 id="expired">***</h1>
+                        <h5 style="color: gray;">Assign reponsible</h5>
+                    </div>
+                </div>
+                <div class="boxes5">
+                    <header class="">
+                        <span class="review">Performance Review</span>
+                        <span class="img3"><img src="{{ url_for('static', filename='images/icons8-arrow-50.png ') }}" alt=""></span>
+                    </header>
+                </div>
+                <div class="boxes6"></div>
+                <div class="boxes7"></div>
+             </div>
+         </div>
+        <!-- end of dashboard -->
+    </div>
+    <!-- end of html elements -->
+</body>
+
+</html>
